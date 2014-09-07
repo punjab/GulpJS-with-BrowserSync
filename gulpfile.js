@@ -50,7 +50,7 @@ gulp.task('jshint', function(){
 
 // JS concat, strip, debug and minify
 gulp.task('scripts', function(){
-	gulp.src(['./src/scripts/myscript.js', jsSrc])
+	gulp.src(['./src/scripts/myscript.js', jsSrc, './node_modules/bootstrap/dist/js/bootstrap.min.js'])
 			.pipe(concat('script.js'))
 			.pipe(stripDebug())
 			.pipe(uglify())
